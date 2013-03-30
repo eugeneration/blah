@@ -1,4 +1,3 @@
-
             // requestAnimationFrame shim
             (function() {
              var i = 0,
@@ -137,14 +136,13 @@
                 //App.video.loop = App.video.muted = true;
                 //App.video.load();
             };
-            
+
 window.FACE {
     
-    "begin" : function(sID, aKey, toke) {
+    "begin" : function(sID, aKey, toke, name) {
             var sessionId = sID;
             var apiKey = aKey;
             var token = toke;
-            
             
             var session = TB.initSession(sessionId);
             
@@ -160,11 +158,11 @@ window.FACE {
                                         // make sure this is my own stream
                                         if (stream.connection.connectionId === session.connection.connectionId) {
                                             //console.log('app init going to be called');
-                                            App.init("Mr. T");
+                                            App.init(name);
                                         }
                                      }
                                      });
             
             session.connect(apiKey, token);
-            }
+      }
 }
